@@ -1,0 +1,60 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+}
+.custom-navbar,.navbar-brand {
+    background-color: #033b6b;
+    font-size: 20px !important;
+    padding-left: 5px;
+}
+.logo{
+    height:100px;
+    object-fit: cover;
+}
+.navbar-brand,.dropdown-toggle,.nav-link{
+    color: white;
+}
+.navbar-brand:hover,
+.dropdown-toggle:hover,
+.nav-link:hover,
+.iconlogout:hover{
+    color: lightblue;
+}
+.navbar-toggler {
+    border-color:white;
+}
+.iconlogout{
+    text-decoration: none;
+    color: white;
+}
+.dropdown-item:hover{
+    background-color: lightblue;
+}
+.notify{
+    padding-right: 1.5rem;
+    color: white;
+}
+/*Onsite Payment Form*/
+form{
+    width:40%;
+    border:1px solid rgb(199, 199, 199);
+    padding:1.5rem;
+    margin:2rem auto;
+    border-radius: 5px;
+}
+input[type="text"],.form-select{
+    border:1px solid rgb(199, 199, 199);
+}
+.btn-primary {
+    border-color: #0056b3; 
+    font-size: 16px; 
+    padding: 10px 20px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    text-transform: uppercase;
+    display: block;
+    margin: 0 auto;
+}
+.btn-primary:hover {
+    background-color: #0056b3;
+}

@@ -1,0 +1,165 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+}
+.custom-navbar,.navbar-brand {
+    background-color: #033b6b;
+    font-size: 20px !important;
+    padding-left: 5px;
+}
+.logo{
+    height:100px;
+    object-fit: cover;
+}
+.navbar-brand,.dropdown-toggle,.nav-link{
+    color: white;
+}
+.navbar-brand:hover,
+.dropdown-toggle:hover,
+.nav-link:hover,
+.iconlogout:hover{
+    color: lightblue;
+}
+.navbar-toggler {
+    border-color:white;
+}
+.iconlogout{
+    text-decoration: none;
+    color: white;
+}
+.dropdown-item:hover{
+    background-color: lightblue;
+}
+.notify{
+    padding: 1.5rem;
+    color: white;
+}
+/*gas approval Table*/
+.viewoutlet-table{
+    width:80%;
+    margin:2rem auto;
+    border:1px solid rgb(199, 199, 199);
+    border: 0;
+}
+.table thead tr th{
+    color:white;
+    background-color:#033b6b ;
+    vertical-align: middle;
+    text-align: center;
+}
+.table tbody tr td{
+    vertical-align: middle;
+    text-align: center;
+}
+th.quantity-header {
+    border-bottom: none;
+}
+.table tbody tr td .btn {
+    margin-bottom: 5px; 
+    display: block; 
+}
+.btn-primary{
+    width: 100%;
+    border: #046ecb 1px solid;
+    background-color: #0058a5;
+    transition: background-color 0.3s, transform 0.3s;
+    text-transform: uppercase;
+    
+}
+.btn-primary:hover{
+    background-color:white;
+    color:#0058a5;
+    transform: scale(1.1); 
+}
+/*Update From
+
+form{
+    width:40%;
+    border:1px solid rgb(199, 199, 199);
+    padding:1.5rem;
+    margin:2rem auto;
+    border-radius: 5px;
+}
+input[type="text"],.form-select{
+    border:1px solid rgb(199, 199, 199);
+}
+.btn-primary {
+    border-color: #0056b3; 
+    font-size: 16px; 
+    padding: 10px 20px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    text-transform: uppercase;
+    display: block;
+    margin: 0 auto;
+}
+.btn-primary:hover {
+    background-color: #0056b3;
+}*/
+/*footer*/
+footer{
+    background-color: #033b6b;
+}
+footer p{
+    color:white;
+}
+footer h6{
+    color: white;
+}
+footer i{
+    color: white;
+}
+footer span{
+    color: white;
+}
+footer a{
+    text-decoration: none;
+}
+.text-reset:hover {
+    color: black !important;
+}
+a.text-reset:hover i {
+    color: black !important;
+}
+.copy-right{
+    color: white;
+}
+/*edit form*/
+.edit-form-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.edit-form{
+    background-color: white;
+    padding: 3rem;
+    border:1px solid black;
+    border-radius: 15px;
+
+}
+
+.close-edit, .option-btn{
+    display: block;
+    margin:0.5rem auto;
+    padding:5px;
+    border-radius: 10px;
+    width:100%;
+    font-size: 16px;
+}
+.btn-success {
+    background-color: #28a745;
+    color: white;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    color: white;
+}

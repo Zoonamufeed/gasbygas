@@ -1,0 +1,33 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+}
+
+/*Onsite request Form*/
+form{
+    width:40%;
+    border:1px solid rgb(199, 199, 199);
+    padding:1.5rem;
+    margin:2rem auto;
+    border-radius: 5px;
+}
+input[type="text"],.form-select{
+    border:1px solid rgb(199, 199, 199);
+}
+.btn-primary {
+    border-color: #0056b3; 
+    font-size: 16px; 
+    padding: 10px 20px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    text-transform: uppercase;
+    display: block;
+    margin: 0 auto;
+}
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/*footer*/
+
+

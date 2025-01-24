@@ -1,0 +1,66 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+}
+.custom-navbar,.navbar-brand {
+    background-color: #033b6b;
+    font-size: 20px !important;
+    padding-left: 5px;
+}
+.logo{
+    height:100px;
+    object-fit: cover;
+}
+.navbar-brand,.dropdown-toggle,.nav-link{
+    color: white;
+}
+.navbar-brand:hover,
+.dropdown-toggle:hover,
+.nav-link:hover,
+.iconlogout:hover{
+    color: lightblue;
+}
+.navbar-toggler {
+    border-color:white;
+}
+.iconlogout{
+    text-decoration: none;
+    color: white;
+}
+.dropdown-item:hover{
+    background-color: lightblue;
+}
+.notify{
+    padding-right: 1.5rem;
+    color: white;
+}
+/*view customer table*/
+.viewcustomer-table{
+    width:60%;
+    margin:2rem auto;
+    border:1px solid rgb(199, 199, 199);
+    border-bottom: none;
+}
+.table thead tr th{
+    color:white;
+    background-color:#033b6b ;
+}
+.table tbody {
+    vertical-align: middle;
+}
+.btn-primary{
+    border:#046ecb 1px solid;
+    background-color:#0058a5;
+    transition: background-color 0.3s;
+    display: block;
+    margin: 0.5rem auto;
+    width: 100px;
+    text-transform: uppercase;
+    
+}
+.btn-primary:hover{
+    background-color:white;
+    color:#0058a5;
+    transform: scale(1.1); 
+}

@@ -1,0 +1,37 @@
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    /*Customer Request Form*/
+    form {
+        width: 40%;
+        border: 1px solid rgb(199, 199, 199);
+        padding: 1.5rem;
+        margin: 2rem auto;
+        border-radius: 5px;
+        box-shadow: 5px 5px 34px 1px rgba(0, 0, 0, 0.24);
+    }
+
+    input[type="text"],
+    .form-select {
+        border: 1px solid rgb(199, 199, 199);
+    }
+    .btn-request:hover {
+        background-color: #0056b3;
+    }
+
+    .btn-request {
+        transition: background-color 0.3s, box-shadow 0.3s;
+        text-transform: uppercase;
+        color: white;
+        width: 160px;
+        height: 45px;
+        border-radius: 3rem;
+        border: 1px solid #0058a5;
+        background: linear-gradient(135deg, #0058a5 0%, #3f3687 100%);
+        display: block;
+    margin: 0 auto;
+
+    }
+    

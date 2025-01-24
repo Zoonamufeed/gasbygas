@@ -1,0 +1,50 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+}
+.custom-navbar,.navbar-brand {
+    background-color: #033b6b;
+    font-size: 20px !important;
+    padding-left: 5px;
+}
+.logo{
+    height:100px;
+    object-fit: cover;
+}
+.navbar-brand,.dropdown-toggle,.nav-link{
+    color: white;
+}
+.navbar-brand:hover,
+.dropdown-toggle:hover,
+.nav-link:hover,
+.iconlogout:hover{
+    color: lightblue;
+}
+.navbar-toggler {
+    border-color:white;
+}
+.iconlogout{
+    text-decoration: none;
+    color: white;
+}
+.dropdown-item:hover{
+    background-color: lightblue;
+}
+.notify{
+    padding-right: 1.5rem;
+    color: white;
+}
+.payment-table{
+    padding-top: 0.5rem;
+    width:50%;
+    margin:2rem auto;
+    border:1px solid rgb(199, 199, 199);
+    border-bottom: none;
+    background-color:#033b6b ;
+}
+.table thead tr th{
+    color:white;
+    background-color:#033b6b ;
+}
+

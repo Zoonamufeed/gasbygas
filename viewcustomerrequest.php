@@ -44,7 +44,7 @@ if (isset($_GET['approve'])) {
     $requestedQuantity = $customer['quantity'];
     $customerBranch = $customer['branch'];
 
-    // Fetch outlet details
+    
     $outletQuery = mysqli_query($conn, "SELECT * FROM `outlet` WHERE preferred_outlet = '$customerBranch'");
     if (!$outletQuery || mysqli_num_rows($outletQuery) === 0) {
         $_SESSION['message'] = [
@@ -56,7 +56,6 @@ if (isset($_GET['approve'])) {
     }
     $outlet = mysqli_fetch_assoc($outletQuery);
 
-    // Map weights to available stock
     $availableStock = [
         '2' => $outlet['available_weight_2kg'],
         '5' => $outlet['available_weight_5kg'],
@@ -64,7 +63,6 @@ if (isset($_GET['approve'])) {
         '37.5' => $outlet['available_weight_37_5kg'],
     ];
 
-    // Check if requested stock exceeds available stock
     if ($availableStock[(string)$requestedWeight] < $requestedQuantity) {
         $_SESSION['message'] = [
             'type' => 'warning',
@@ -143,7 +141,6 @@ if (isset($_GET['approve'])) {
 if (isset($_GET['deny'])) {
     $customerId = $_GET['deny'];
 
-    // Fetch customer email
     $customerQuery = mysqli_query($conn, "SELECT email FROM `customer` WHERE id = '$customerId'");
     $customer = mysqli_fetch_assoc($customerQuery);
     $customerEmail = $customer['email'];

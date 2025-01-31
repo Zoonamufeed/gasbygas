@@ -17,14 +17,10 @@ if (isset($_GET['approve'])) {
     $approvedDate = date('Y-m-d H:i:s');
     $dueDate = date('Y-m-d H:i:s', strtotime('+2 weeks'));
 
-    // Fetch the highest token from customer and business tables as max token, 
-    //if not taken available or null the coalesce takes as 0
-    // the 'greatest' compare the token from customer and bsuiness
     $tokenQuery = mysqli_query($conn, "SELECT GREATEST(
         COALESCE((SELECT MAX(token) FROM `customer`), 0), 
         COALESCE((SELECT MAX(token) FROM `business`), 0)
     ) AS max_token");
-    //fecthing the result from max token and stores as last token
     $tokenResult = mysqli_fetch_assoc($tokenQuery);
     $lastToken = $tokenResult['max_token'];
 
@@ -78,10 +74,10 @@ if (isset($_GET['approve'])) {
         exit;
     }
 
-    // Deduct stock
+    
     $availableStock[(string)$requestedWeight] -= $requestedQuantity;
 
-    // Update outlet stock
+    
     $updateOutletQuery = "UPDATE `outlet` SET 
         available_weight_2kg = '{$availableStock['2']}',
         available_weight_5kg = '{$availableStock['5']}',
@@ -90,7 +86,7 @@ if (isset($_GET['approve'])) {
         WHERE preferred_outlet = '$customerBranch'";
     mysqli_query($conn, $updateOutletQuery) or die('Failed to update outlet stock: ' . mysqli_error($conn));
 
-    // Update customer approval details
+    
     $updateCustomerQuery = "UPDATE `customer` SET 
         approved_date = '$approvedDate', 
         due_date = '$dueDate', 
@@ -152,7 +148,7 @@ if (isset($_GET['deny'])) {
     $customer = mysqli_fetch_assoc($customerQuery);
     $customerEmail = $customer['email'];
 
-    // Update customer status to 'Deny'
+  
     $updateQuery = "UPDATE `customer` SET approved_date = NULL, status = 'Deny' WHERE id = '$customerId'";
     if (mysqli_query($conn, $updateQuery)) {
     
